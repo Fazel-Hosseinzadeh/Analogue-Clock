@@ -3,3 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222222;
+    
+}
+
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 0 0 8px 1px #0f0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
