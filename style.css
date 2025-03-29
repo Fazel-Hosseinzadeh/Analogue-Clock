@@ -15,6 +15,7 @@ body{
 
 
 .clock{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +28,7 @@ body{
 }
 
 .clock .numbers-container{
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,3 +47,24 @@ body{
     color: inherit;
     transform: rotate(calc(360deg / (-12) * var(--n)));
 }
+
+.clock .hour-container, .clock .minute-container, .clock .second-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(15, 148, 201);
+    border-radius: 50%;
+
+}
+
+.clock .hour-container .hour{
+    
+    width: 6px;
+    height: 50px;
+    background: #0f0;
+    transform: translateY(-25px);
+}
+
