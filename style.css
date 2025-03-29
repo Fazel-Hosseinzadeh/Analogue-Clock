@@ -26,3 +26,23 @@ body{
 
 }
 
+.clock .numbers-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clock .numbers-container .number{
+    position: absolute;
+    color: #0f0;
+    text-shadow: 0 0 20px #0f0;
+    transition: 1s;
+    transform: rotate(calc(360deg / 12 * var(--n))) translate(0px , -90px) ;
+}
+
+.clock .numbers-container .number .num{
+    color: inherit;
+    transform: rotate(calc(360deg / (-12) * var(--n)));
+}
