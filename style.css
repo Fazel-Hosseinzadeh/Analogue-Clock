@@ -24,15 +24,21 @@ body{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10;
 }
 
 .clock .numbers-container{
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .clock .numbers-container .number{
@@ -48,23 +54,28 @@ body{
     transform: rotate(calc(360deg / (-12) * var(--n)));
 }
 
-.clock .hour-container, .clock .minute-container, .clock .second-container{
+.clock .hour-container,
+.clock .minute-container,
+.clock .second-container{
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10px;
-    height: 10px;
-    background-color: rgb(15, 148, 201);
-    border-radius: 50%;
-
 }
 
 .clock .hour-container .hour{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 50px;
+    height: 100px;
+    /* background-color: rgba(0, 255, 0, 0.132); */
+    /* transform: rotate(110deg); */
     
-    width: 6px;
-    height: 50px;
-    background: #0f0;
-    transform: translateY(-25px);
 }
-
+.clock .hour-container .hour::before{
+    content: '';
+    /* position: absolute; */
+    width: 5px;
+    height: 50px;
+    background-color: #0f0; 
+    border-radius: 2px 2px 0 0;
+    z-index: 11;
+}
