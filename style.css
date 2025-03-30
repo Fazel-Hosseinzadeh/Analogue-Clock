@@ -25,14 +25,16 @@ body{
     height: 200px;
     border-radius: 50%;
 }
+
 .clock::before{
     content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #fff;
+    width: 5px;
+    height: 5px;
+    background: #0f0;
+    box-shadow: 0px 0px 4px 2px #0f0;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 12;
 }
 
 .clock .numbers-container{
