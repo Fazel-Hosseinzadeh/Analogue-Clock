@@ -113,3 +113,13 @@ body{
     z-index: 9;
 }
 
+.clock .digital{
+    position: absolute;
+    top: 220px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 20px;
+    background-color: rgba(0, 255, 0, 0.226);
+    color: #fff;
+}
