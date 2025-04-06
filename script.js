@@ -6,14 +6,10 @@ const digitalClock = document.querySelector(".clock .digital");
 setInterval(()=>{    
     const day = new Date();
 
-    // day.setMilliseconds(900);
     const h = day.getHours() > 12 ? day.getHours() -12 : day.getHours();
     const m = day.getMinutes();
     const s = day.getSeconds()
     const ms = day.getMilliseconds();
-
-
-   console.log(h + ":" + m + ":" + s + ":" + ms);
 
     hr.style.transform = `rotate(${((360 / 12) * h) + (360 / (12 * 60) * m)}deg)`; 
     mn.style.transform = `rotate(${(360 / 60) * m}deg)`; 
