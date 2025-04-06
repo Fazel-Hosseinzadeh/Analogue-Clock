@@ -3,19 +3,21 @@ const mn = document.querySelector('.clock .minute-container .minute');
 const sc = document.querySelector('.clock .second-container .second');
 const digitalClock = document.querySelector(".clock .digital");
 
-const day = new Date();
-const s = day.getSeconds();
-let ms = s *1000;
-
 setInterval(()=>{    
     const day = new Date();
-    const h = day.getHours() >= 12 ? day.getHours() -12 : day.getMinutes();
+
+    // day.setMilliseconds(900);
+    const h = day.getHours() > 12 ? day.getHours() -12 : day.getHours();
     const m = day.getMinutes();
-    ms = ms < 60000 ? ms += 10 : 0;
+    const s = day.getSeconds()
+    const ms = day.getMilliseconds();
+
+
+   console.log(h + ":" + m + ":" + s + ":" + ms);
 
     hr.style.transform = `rotate(${((360 / 12) * h) + (360 / (12 * 60) * m)}deg)`; 
     mn.style.transform = `rotate(${(360 / 60) * m}deg)`; 
-    sc.style.transform = `rotate(${360 / (60 * 1000) * ms}deg)`;   
+    sc.style.transform = `rotate(${ ( ( 360 / 60 ) * s ) + ( (360 / (60 * 1000) ) * ms) }deg)`;   
         
 }, 10);
 
